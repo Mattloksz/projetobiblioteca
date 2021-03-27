@@ -8,6 +8,7 @@ public class DesafioBibliotecaApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DesafioBibliotecaApplication.class, args);
+		System.out.println("Rodouuuu!!!!");
 	}
 
 }
