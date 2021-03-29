@@ -1,13 +1,33 @@
 package Model;
 
-public class Livro {
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+import com.sun.istack.NotNull;
+
+public class Livro {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idLivro;
+	
+	@Column
 	private String isbn;
+	
+	@Column @NotNull
 	private String titulo;
+	
+	@Column
 	private Double valorDiaria;
+	
+	@Column @NotNull
 	private Integer exemplares;
+	
+	@Column 
 	private Integer reservadas;
+	
 	LocacaoItem locacaoItem;
 	
 	public Livro() {

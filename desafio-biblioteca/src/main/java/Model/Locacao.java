@@ -2,11 +2,26 @@ package Model;
 
 import java.sql.Date;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 public class Locacao {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idLocacao;
+	
+	@Column
 	private Date dataAgendamento;
+	
+	@Column
 	private Date dataRetirada;
+	
+	@Column
 	private Date dataFinalizada;
+	
+	@Column
 	private Double valorTotal;
 	 
 	 public Locacao() {

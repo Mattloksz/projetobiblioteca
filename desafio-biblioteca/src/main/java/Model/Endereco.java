@@ -1,13 +1,35 @@
 package Model;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import com.sun.istack.NotNull;
+
 public class Endereco {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idEndereco;
+	
+	@Column (nullable = false , length = 9)
 	private String cep;
+	
+	@Column @NotNull
 	private String logradouro;
+	
+	@Column
 	private String bairro;
+	
+	@Column
 	private String localidade;
+	
+	@Column
 	private String uf;
+	
+	@Column
 	private Integer ibge;
+	
 	Cadastro cadastro;
 	
 	public Endereco() {
